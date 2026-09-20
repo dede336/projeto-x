@@ -1,0 +1,28 @@
+{
+  "stage": 10,
+  "title": "Mochila + Itens + Craft + Gacha",
+  "base": "OMEGA-DX-COMPLETO-ETAPA-09-DIGIFARM.zip",
+  "counts": {
+    "equipment_items_static": 21,
+    "craft_recipes_static": 17
+  },
+  "checks": {
+    "mochila_route": true,
+    "craft_route": true,
+    "gacha_route": true,
+    "inventory_state": true,
+    "equipment": true,
+    "craft_function": true,
+    "gacha_function": false,
+    "gacha_pity": true,
+    "battle_equipment_bonus": true,
+    "battle_drops_inventory": true,
+    "aptitude_absent_scope": true,
+    "battle_consumable_model_found": false
+  },
+  "notes": [
+    "O pacote original não define modelo de consumível/poção de batalha; não foi inventado um sistema ausente.",
+    "Equipamentos já afetam a batalha através dos bônus definidos em EQUIPMENT_ITEMS.",
+    "Drops/recompensas de batalha alimentam inventário/peças conforme o sistema existente."
+  ]
+}

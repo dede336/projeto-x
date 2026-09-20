@@ -1,0 +1,22 @@
+{
+  "stage": 2,
+  "title": "Banco de dados do jogo",
+  "static_characters": 100,
+  "seed_custom_digimon_names": 1732,
+  "character_image_map_entries": 400,
+  "digimon_asset_files": 1185,
+  "server_seed_top_level_images": 1163,
+  "character_image_require_refs": 400,
+  "missing_character_image_require_refs": [],
+  "aptitude_occurrences_after_stage1": 2,
+  "sources_verified": [
+    "constants/gameData.ts",
+    "constants/extendedCharacters.ts",
+    "constants/characterImages.ts",
+    "constants/extendedItems.ts",
+    "api-server/src/seed.ts",
+    "api-server/src/seeds/unnamed_mapping.json",
+    "lib/db/src/schema/custom_digimons.ts",
+    "lib/db/src/schema/custom_items.ts"
+  ]
+}

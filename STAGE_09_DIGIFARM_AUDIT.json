@@ -1,0 +1,43 @@
+{
+  "stage": 9,
+  "title": "Digifarm completo",
+  "checks": {
+    "digifarm_screen": true,
+    "six_slot_progression": true,
+    "passive_xp": true,
+    "xp_cap_config": true,
+    "feeding": true,
+    "hunger_satisfaction": true,
+    "battle_requests": true,
+    "daily_reward": true,
+    "pre_rookie_evolution": true,
+    "decorations": true,
+    "digimon_wandering": true,
+    "social_interactions": true,
+    "day_night_weather": true,
+    "all_primary_assets_exist": true,
+    "no_aptitude_in_farm_scope": true
+  },
+  "assets": {
+    "digifarm-bg3.webp": true,
+    "farm_frame_transparent.webp": true,
+    "food_apple.webp": true,
+    "food_sushi.webp": true,
+    "food_water.webp": true,
+    "food_salad.webp": true,
+    "food_burger.webp": true,
+    "food_pizza.webp": true
+  },
+  "all_checks_passed": true,
+  "notes": [
+    "DigiFarm preserva até 6 slots, desbloqueados pelo nível do Tamer.",
+    "XP passivo usa configuração farmXpPerHour/farmMaxHours e coleta por slot.",
+    "Alimentação, fome/satisfação, pedidos de batalha, recompensa diária, evolução pré-Rookie, decoração, movimento e interações sociais foram auditados.",
+    "Corrigido texto de progresso da evolução Training para indicar requisito Lv. 5 sem alterar a regra.",
+    "Aptitude permanece ausente do escopo funcional da DigiFarm."
+  ],
+  "sha256": {
+    "artifacts/omega-dx10/app/(tabs)/digifarm.tsx": "7175c5ac01be6a310a2f3af6cc071d6dfff669801240eb8ae6587d22f2ed0eec",
+    "artifacts/omega-dx10/context/GameContext.tsx": "12a99b252c6cad35a1406a31402070508b6c1e2e92b5782154c3bfeb7b2449ac"
+  }
+}

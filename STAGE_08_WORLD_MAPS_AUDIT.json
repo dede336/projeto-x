@@ -1,0 +1,52 @@
+{
+  "stage": 8,
+  "name": "Mundo, mapas, encontros, Dungeon, Eventos e ligação com Batalha",
+  "static_map_id_occurrences_after_GAME_MAPS": 59,
+  "map_asset_files": 23,
+  "map_assets": [
+    "dungeon_final.webp",
+    "map_volcano.webp",
+    "dungeon_gulus_bg.webp",
+    "map_lab.webp",
+    "map_ocean.webp",
+    "acess_glacier.webp",
+    "map_core.webp",
+    "map_plant_bg.webp",
+    "dungeon_daily_bg.webp",
+    "chip_forest.webp",
+    "chaos_brain.webp",
+    "map_ruins.webp",
+    "map_apocalypse.webp",
+    "map_void.webp",
+    "map_omega.webp",
+    "dungeon_gulus.webp",
+    "map_dark_abyss_bg.webp",
+    "map_battlefield.webp",
+    "map_metal_bg.webp",
+    "map_fog.webp",
+    "map_angel_bg.webp",
+    "map_quarantine.webp",
+    "map_final_domain_bg.webp"
+  ],
+  "checks": {
+    "tabs_digimundo_dungeon_eventos": true,
+    "stage_to_battle_route": true,
+    "world_map_screen": true,
+    "wild_encounters": true,
+    "encounter_real_name_resolution": true,
+    "custom_maps_loaded": true,
+    "custom_map_battle_resolution": true,
+    "custom_enemy_resolution": true,
+    "boss_stages": true,
+    "daily_dungeon": true,
+    "rewards_in_battle": true,
+    "aptitude_absent_world_battle": true
+  },
+  "all_checks_passed": true,
+  "fixes_applied": [
+    "Batalha agora resolve mapas customizados carregados do servidor, além dos GAME_MAPS estáticos.",
+    "Inimigos de mapas customizados agora usam getCharacter(), incluindo Digimon dinâmicos.",
+    "Desbloqueio de mapas aceita mapas customizados e suas dependências.",
+    "Encontro selvagem mostra o nome real resolvido do Digimon em vez de ???."
+  ]
+}

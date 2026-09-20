@@ -1,0 +1,39 @@
+{
+  "stage": 7,
+  "name": "Batalha 3x3",
+  "source": "Etapa 06 cumulativa",
+  "checks": {
+    "three_player_team_slots": true,
+    "multi_enemy_target_selection": true,
+    "speed_turn_queue": true,
+    "physical_attack": true,
+    "spirit_attack_mp": true,
+    "multi_target_spirit": true,
+    "defend_action": true,
+    "enemy_ai": true,
+    "attribute_multiplier": true,
+    "element_multiplier": true,
+    "critical_hits": true,
+    "ko_and_team_continue": true,
+    "rewards_bits_exp_drops": true,
+    "auto_battle": true,
+    "equipment_bonuses": true,
+    "no_aptitude_battle": true
+  },
+  "notes": [
+    "Mantida a arquitetura original de batalha 3x3 e fila por SPD.",
+    "Adicionada ação Defender: reduz em 50% o próximo dano inimigo recebido pelo lutador.",
+    "O botão Item original era placeholder e o pacote não possui modelo de consumível de batalha; a ligação de consumíveis será feita cumulativamente na Etapa 10 (Mochila/Itens), sem inventar dados agora.",
+    "Aptitude permanece ausente do escopo de batalha."
+  ],
+  "files": {
+    "artifacts/omega-dx10/app/battle.tsx": {
+      "bytes": 89568,
+      "sha256": "142ef50ec9bbc9be84e0da3c46c31a2cb9e5553432ceb54e8195db803f52606b"
+    },
+    "artifacts/omega-dx10/utils/battleEngine.ts": {
+      "bytes": 8405,
+      "sha256": "804ef3bc86ca1eded501dd983c066dc909ca9ec7a9ef01a6dae9c4039a4065de"
+    }
+  }
+}
