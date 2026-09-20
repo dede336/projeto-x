@@ -124,6 +124,7 @@ export function buildFighter(
       def: stats.def + (flat.def ?? 0),
       spt: stats.spt + (flat.spt ?? 0),
       spd: stats.spd + (flat.spd ?? 0),
+      apt: stats.apt + (flat.apt ?? 0),
     };
 
     if (elementBonuses) {
@@ -137,6 +138,7 @@ export function buildFighter(
             def: Math.floor(stats.def * m),
             spt: Math.floor(stats.spt * m),
             spd: Math.floor(stats.spd * m),
+            apt: Math.floor(stats.apt * m),
           };
         }
       }
@@ -151,6 +153,7 @@ export function buildFighter(
         def: percentBonuses.def ? Math.floor(stats.def * (1 + percentBonuses.def)) : stats.def,
         spt: percentBonuses.spt ? Math.floor(stats.spt * (1 + percentBonuses.spt)) : stats.spt,
         spd: percentBonuses.spd ? Math.floor(stats.spd * (1 + percentBonuses.spd)) : stats.spd,
+        apt: percentBonuses.apt ? Math.floor(stats.apt * (1 + percentBonuses.apt)) : stats.apt,
       };
     }
   }
