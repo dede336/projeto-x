@@ -42,7 +42,7 @@ export function useAuth() {
 }
 
 function buildApiUrl(): string {
-  return 'https://omega-dx-backend.onrender.com/api';
+  return 'https://projeto-x-backend-o2ak.onrender.com/api';
 }
 
 const AUTH_TIMEOUT_MS = 15000;
