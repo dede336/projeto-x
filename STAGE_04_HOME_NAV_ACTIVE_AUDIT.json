@@ -1,0 +1,24 @@
+{
+  "stage": 4,
+  "title": "Home + Navigation + Active Digimon animations",
+  "checks": {
+    "home_has_all_tamer_backgrounds": true,
+    "active_digimon_has_element_animations": true,
+    "active_digimon_has_special_animations": true,
+    "active_stats_no_aptitude": true,
+    "active_stats_expected": true,
+    "quick_actions": true,
+    "navigation_12_routes": true,
+    "navigation_fab_mounted": true,
+    "all_home_nav_require_assets_exist": true,
+    "profile_gate_absent": true,
+    "aptitude_absent_from_code": true
+  },
+  "missing_required_assets": [],
+  "aptitude_code_hits": [],
+  "files_checked": [
+    "artifacts/omega-dx10/app/(tabs)/index.tsx",
+    "artifacts/omega-dx10/components/NavigationFAB.tsx",
+    "artifacts/omega-dx10/app/(tabs)/_layout.tsx"
+  ]
+}

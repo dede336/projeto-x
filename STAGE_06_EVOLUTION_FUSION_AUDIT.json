@@ -1,0 +1,57 @@
+{
+  "stage": 6,
+  "title": "Evolucao, arvores, requisitos, formas alternativas, sacrificios e fusoes",
+  "generated_at": "2026-09-17T14:35:55.484593+00:00",
+  "source": "OMEGA-DX-COMPLETO-ETAPA-05-BANCO-DIGIBANK-COLECAO.zip",
+  "static_rule_counts": {
+    "EVOLUTIONS": 39,
+    "ALTERNATE_EVOLUTIONS": 11,
+    "EXTRA_ALTERNATE_EVOLUTIONS": 1,
+    "HARDCODED_CUSTOM_ALTERNATE_EVOLUTIONS": 8,
+    "FUSIONS": 5,
+    "FORM_CHANGES": 4
+  },
+  "dynamic_evolution_loading": true,
+  "dynamic_source": "constants/extendedCharacters.ts injects server/custom evolution relationships into evolution maps after load",
+  "fixes_applied": [
+    "character detail fusion result/partner now resolves through getCharacter for base and custom Digimon",
+    "fusion animation source/target now resolves through getCharacter",
+    "fusion partner picker copies now resolve through getCharacter"
+  ],
+  "permanent_rules": [
+    "Aptitude absent from functional evolution scope",
+    "DNA/fusion treated as evolution requirement/mechanic, not a stage"
+  ],
+  "checks": {
+    "app/evo-tree/[characterId].tsx": {
+      "exists": true,
+      "sha256": "82bc4d931f16046c885edb726a04a47fafd3483b751bde4e3814872637e4f597"
+    },
+    "app/character/[id].tsx": {
+      "exists": true,
+      "sha256": "1637e334945610e9ae66eb59b4865d94872b132bd1a0189a4a0d6cda977c2b68"
+    },
+    "context/GameContext.tsx": {
+      "exists": true,
+      "sha256": "1b9854ef810b45ad9c7b71fa340229c0a13ea45126ecd4aef05c638a5b1adac1"
+    },
+    "constants/gameData.ts": {
+      "exists": true,
+      "sha256": "499f45f5a620a1a0f4a6c5948562843a4581b6985a52007ec74e0882578eaeef"
+    },
+    "constants/extendedCharacters.ts": {
+      "exists": true,
+      "sha256": "540c5e16d975c7ee7624207792200519221b055dc358b109fa3570781f86a850"
+    },
+    "app/(tabs)/banco.tsx": {
+      "exists": true,
+      "sha256": "137ec66cabed75e929a1a796b6b1aba67b0eea71372fac30475a16ca21648473"
+    },
+    "app/(tabs)/collection.tsx": {
+      "exists": true,
+      "sha256": "9c6d10aefaae161cd81fe552b18e74280426021a35604d7204f5ef81349def9e"
+    }
+  },
+  "aptitude_refs_in_evolution_scope": 0,
+  "direct_CHARACTERS_index_in_character_detail_after_fix": 0
+}

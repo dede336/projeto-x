@@ -1,0 +1,48 @@
+{
+  "stage": 5,
+  "title": "Banco + Digibank + Colecao",
+  "cumulative_from": "ETAPA 04",
+  "checks": {
+    "banco_screen": true,
+    "digibank_collection_screen": true,
+    "no_hidden_name_placeholder": true,
+    "no_aptitude_in_banco_collection": true,
+    "custom_character_resolution_in_collection": true,
+    "collection_limit_standard": 500,
+    "collection_limit_admin": 5000,
+    "banco_filters": [
+      "owned",
+      "missing",
+      "available",
+      "unavailable",
+      "element",
+      "phase",
+      "attribute"
+    ]
+  },
+  "changes": [
+    "Collection modal/evolution/form-change character resolution now falls back through getCharacter(), so server/custom Digimon names and metadata are resolved instead of relying only on static CHARACTERS."
+  ],
+  "files": {
+    "artifacts/omega-dx10/app/(tabs)/banco.tsx": {
+      "size": 37879,
+      "sha256": "137ec66cabed75e929a1a796b6b1aba67b0eea71372fac30475a16ca21648473"
+    },
+    "artifacts/omega-dx10/app/(tabs)/collection.tsx": {
+      "size": 49566,
+      "sha256": "9c6d10aefaae161cd81fe552b18e74280426021a35604d7204f5ef81349def9e"
+    },
+    "artifacts/omega-dx10/context/GameContext.tsx": {
+      "size": 59925,
+      "sha256": "1b9854ef810b45ad9c7b71fa340229c0a13ea45126ecd4aef05c638a5b1adac1"
+    },
+    "artifacts/omega-dx10/constants/extendedCharacters.ts": {
+      "size": 17806,
+      "sha256": "540c5e16d975c7ee7624207792200519221b055dc358b109fa3570781f86a850"
+    },
+    "artifacts/omega-dx10/constants/gameData.ts": {
+      "size": 124598,
+      "sha256": "499f45f5a620a1a0f4a6c5948562843a4581b6985a52007ec74e0882578eaeef"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "stage": 11,
+  "title": "Correios, Ranking, Amigos, Chat, Admin, PvP e backend",
+  "checks": {
+    "correios_screen": true,
+    "ranking_screen": true,
+    "friends_screen": true,
+    "chat_screen": true,
+    "admin_screen": true,
+    "pvp_friend_battle": true,
+    "chat_api": true,
+    "friends_api": true,
+    "leaderboard_api": true,
+    "players_api": true,
+    "saves_api": true,
+    "no_aptitude_scope": true,
+    "friends_uses_api": true,
+    "chat_uses_api": true,
+    "ranking_uses_api": true,
+    "friend_battle_uses_context": true
+  },
+  "files": {
+    "correios": {
+      "path": "artifacts/omega-dx10/app/(tabs)/correios.tsx",
+      "exists": true,
+      "sha256": "274112f3e257a8b6ddfb8e57f5cbd5ac9b20fc46f747ee5d3ca50c3d6576f368",
+      "bytes": 14202
+    },
+    "ranking": {
+      "path": "artifacts/omega-dx10/app/(tabs)/ranking.tsx",
+      "exists": true,
+      "sha256": "afeb0ab82115f844b9c9ff3cd7b20dbe9bb2a038ff283012199d246b0e8346ab",
+      "bytes": 13325
+    },
+    "amigos": {
+      "path": "artifacts/omega-dx10/app/(tabs)/amigos.tsx",
+      "exists": true,
+      "sha256": "4d93164d8f99ced7fd8c0091f4d548b794d9f0722e290485be07b0121ed269cf",
+      "bytes": 21022
+    },
+    "chat": {
+      "path": "artifacts/omega-dx10/app/(tabs)/chat.tsx",
+      "exists": true,
+      "sha256": "30a99b2c409b816bfd659339966662ae77e37e4d69281d313c56e78077b1011b",
+      "bytes": 21205
+    },
+    "admin": {
+      "path": "artifacts/omega-dx10/app/(tabs)/admin.tsx",
+      "exists": true,
+      "sha256": "0059c7bbae3ed928942eaad7256ac0427d09bd0c491f5186172333929d895e6b",
+      "bytes": 5211
+    },
+    "friend_battle": {
+      "path": "artifacts/omega-dx10/app/friend-battle.tsx",
+      "exists": true,
+      "sha256": "aeba9be3194daf420dc2d94e6e7800c6711eacc701458abc0aa5c6c70841f10b",
+      "bytes": 22933
+    },
+    "chat_conversation": {
+      "path": "artifacts/omega-dx10/app/chat-conversation.tsx",
+      "exists": true,
+      "sha256": "826da7b6c540ebabcc0383a71e1ad099ab643f1a0613b3726598b8edd729d7c7",
+      "bytes": 8970
+    },
+    "api_chat": {
+      "path": "artifacts/api-server/src/routes/chat.ts",
+      "exists": true,
+      "sha256": "270757f0a683d24633c8b0d624982c63e24ba12eaa9b6a49fb295886810754f6",
+      "bytes": 7522
+    },
+    "api_friends": {
+      "path": "artifacts/api-server/src/routes/friends.ts",
+      "exists": true,
+      "sha256": "eedda5a9db7bf03a4c3608144fd17217ccdcac8a44d79a7b69b74638fd8142e4",
+      "bytes": 5821
+    },
+    "api_leaderboard": {
+      "path": "artifacts/api-server/src/routes/leaderboard.ts",
+      "exists": true,
+      "sha256": "c045227f0c74d8e9d247869a9195bcb02d408d8398d213810dcbd6740fadd899",
+      "bytes": 3217
+    },
+    "api_players": {
+      "path": "artifacts/api-server/src/routes/players.ts",
+      "exists": true,
+      "sha256": "5600cb51b39c10a1213043e891fda90f54e64d95893c71a313c38ce807c1cda3",
+      "bytes": 1547
+    },
+    "api_saves": {
+      "path": "artifacts/api-server/src/routes/saves.ts",
+      "exists": true,
+      "sha256": "c9f47cd9579d901549ed8b0d1f1b96bb77925c307dac08b41c79b3e92ac85378",
+      "bytes": 11327
+    },
+    "api_admin": {
+      "path": "artifacts/api-server/src/routes/config.ts",
+      "exists": true,
+      "sha256": "fcbc3bf1d4cb705412c0c134a1ee67b63d4a23ffd0e02b754ec15421bd5547f6",
+      "bytes": 1373
+    }
+  },
+  "notes": [
+    "Etapa 11 auditada sobre o pacote cumulativo da Etapa 10.",
+    "Nenhuma referência funcional a Aptitude foi encontrada no escopo desta etapa.",
+    "Sistemas dependentes de backend permanecem ligados às rotas originais do api-server; funcionamento em produção exige servidor/banco configurados."
+  ],
+  "passed": 16,
+  "total": 16,
+  "all_passed": true
+}
