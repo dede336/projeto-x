@@ -1,45 +1,77 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import React from 'react';
 import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import {
+  NavigationContainer,
+} from '@react-navigation/native';
+import {
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+import { LanguageProvider } from '@/context/LanguageContext';
+import LanguageSelectNative from '@/screens/LanguageSelectNative';
 
+const Stack = createNativeStackNavigator();
+
+function LoginPlaceholder() {
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
+    <View style={styles.placeholder}>
+      <Text style={styles.title}>OMEGA DX10</Text>
+      <Text style={styles.text}>
+        Seleção de idioma concluída.
+      </Text>
+      <Text style={styles.text}>
+        Próxima etapa: migrar o login.
+      </Text>
     </View>
   );
 }
 
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <LanguageProvider>
+        <StatusBar barStyle="light-content" backgroundColor="#0a0a0f" />
+
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen
+              name="LanguageSelect"
+              component={LanguageSelectNative}
+            />
+            <Stack.Screen
+              name="Login"
+              component={LoginPlaceholder}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </LanguageProvider>
+    </SafeAreaProvider>
+  );
+}
+
 const styles = StyleSheet.create({
-  container: {
+  placeholder: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 12,
+    padding: 24,
+    backgroundColor: '#0a0a0f',
+  },
+  title: {
+    color: '#f97316',
+    fontSize: 28,
+    fontWeight: '900',
+  },
+  text: {
+    color: '#ffffff',
+    fontSize: 16,
+    textAlign: 'center',
   },
 });
-
-export default App;
