@@ -183,7 +183,7 @@ export function ImagePickerBlock({ data, onChange, label, cropWidth, cropHeight 
       try {
         const cacheUri = `${(FileSystem as any).cacheDirectory}upload_gif_${Date.now()}.gif`;
         await FileSystem.copyAsync({ from: asset.uri, to: cacheUri });
-        const gifBase64 = await FileSystem.readAsStringAsync(cacheUri, { encoding: FileSystem.EncodingType.Base64 });
+        const gifBase64 = await FileSystem.readAsStringAsync(cacheUri, { encoding: (FileSystem as any).EncodingType.Base64 });
         await FileSystem.deleteAsync(cacheUri, { idempotent: true });
         onChange({ base64: gifBase64, previewUri: asset.uri, mimeType: 'image/gif' });
       } catch {

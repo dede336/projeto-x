@@ -458,29 +458,27 @@ export default function SendSection() {
           </>
         )}
 
-        {/* Send button (for non-copiar tabs) */}
-        {tab !== 'copiar' && (
-          <TouchableOpacity
-            style={[styles.sendBtn, {
-              backgroundColor: TABS.find((t) => t.key === tab)?.color ?? '#8b5cf6',
-              opacity: loading ? 0.6 : 1,
-              marginTop: 16,
-            }, pixelStyle]}
-            onPress={handleSend}
-            disabled={loading}
-          >
-            {loading
-              ? <ActivityIndicator size={16} color="#fff" />
-              : <Text style={{ color: '#fff', fontWeight: '800', fontSize: 13 }}>
-                  {tab === 'digimon'    ? '🦖 Enviar Digimon'    :
-                   tab === 'item'       ? '⚔️ Enviar Item'        :
-                   tab === 'fragmento'  ? '🔮 Enviar Fragmento'   :
-                   tab === 'decoracao'  ? '🛣️ Enviar Decorações'  :
-                                         '💎 Enviar Gemas'}
-                </Text>
-            }
-          </TouchableOpacity>
-        )}
+        {/* Send button */}
+        <TouchableOpacity
+          style={[styles.sendBtn, {
+            backgroundColor: TABS.find((t) => t.key === tab)?.color ?? '#8b5cf6',
+            opacity: loading ? 0.6 : 1,
+            marginTop: 16,
+          }, pixelStyle]}
+          onPress={handleSend}
+          disabled={loading}
+        >
+          {loading
+            ? <ActivityIndicator size={16} color="#fff" />
+            : <Text style={{ color: '#fff', fontWeight: '800', fontSize: 13 }}>
+                {tab === 'digimon'    ? '🦖 Enviar Digimon'    :
+                 tab === 'item'       ? '⚔️ Enviar Item'        :
+                 tab === 'fragmento'  ? '🔮 Enviar Fragmento'   :
+                 tab === 'decoracao'  ? '🛣️ Enviar Decorações'  :
+                                       '💎 Enviar Gemas'}
+              </Text>
+          }
+        </TouchableOpacity>
       </View>
       )}
 

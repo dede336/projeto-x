@@ -48,7 +48,7 @@ export default function SaveManagerSection() {
         Alert.alert('✅ Save Exportado!', `Arquivo "${filename}" baixado com sucesso.`);
       } else {
         // Native: write file then share via React Native Share
-        const FileSystem = (await import('expo-file-system')).default;
+        const FileSystem = (await import('expo-file-system')).default as any;
         const { Share } = await import('react-native');
         const path = FileSystem.documentDirectory + filename;
         await FileSystem.writeAsStringAsync(path, json, { encoding: FileSystem.EncodingType.UTF8 });
@@ -93,7 +93,7 @@ export default function SaveManagerSection() {
       // Native: use expo-document-picker
       try {
         const DocumentPicker = await import('expo-document-picker');
-        const FileSystem = await import('expo-file-system');
+          const FileSystem = await import('expo-file-system') as any;
         const result = await DocumentPicker.getDocumentAsync({
           type: ['application/json', '*/*'],
           copyToCacheDirectory: true,

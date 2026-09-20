@@ -810,7 +810,6 @@ export default function WorldMapScreen({ visible, mapId, onClose }: Props) {
             source={MAP_FRAME}
             style={{ position: 'absolute', top: 0, left: 0, width: MAP_VIEW_W, height: MAP_VIEW_W, zIndex: 10 }}
             resizeMode="stretch"
-            pointerEvents="none"
           />
 
         </View>{/* fim wrapper mapa+moldura */}
