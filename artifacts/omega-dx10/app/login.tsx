@@ -78,7 +78,7 @@ export default function LoginScreen() {
                 <PixelBox
                   key={m}
                   onPress={() => { setMode(m); setError(''); }}
-                  style={[styles.toggleBtn, mode === m ? styles.toggleBtnActive : undefined]}
+                  style={[styles.toggleBtn, mode === m ? styles.toggleBtnActive : {}]}
                   bgColor={mode === m ? '#0a0a0f' : '#1a1a2e'}
                 >
                   <TouchableOpacity
@@ -159,7 +159,7 @@ export default function LoginScreen() {
               )}
 
               <PixelBox
-                style={[styles.submitBtn, loading ? styles.submitBtnLoading : undefined]}
+                style={[styles.submitBtn, loading ? styles.submitBtnLoading : {}]}
                 bgColor="#0a0a0f"
               >
                 <TouchableOpacity
