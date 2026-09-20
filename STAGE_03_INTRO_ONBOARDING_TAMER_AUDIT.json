@@ -1,0 +1,70 @@
+{
+  "stage": 3,
+  "title": "Intro + onboarding + escolha original do Tamer",
+  "base": "OMEGA-DX-COMPLETO-ETAPA-02-BANCO-DE-DADOS",
+  "flow": [
+    "NavigationGuard",
+    "/intro",
+    "/onboarding (se necessário)",
+    "/(tabs)"
+  ],
+  "tamer_selection": {
+    "male": [
+      "Matt",
+      "Tai",
+      "TK"
+    ],
+    "female": [
+      "Mimi",
+      "Sora",
+      "Kari"
+    ]
+  },
+  "starter_mapping": {
+    "tamer_tai": "agumon",
+    "tamer_tk": "patamon",
+    "tamer_matt": "gabumon",
+    "tamer_kari": "salamon",
+    "tamer_sora": "pyomon",
+    "tamer_mimi": "palmon"
+  },
+  "permanent_adjustments": [
+    "Seleção de gênero limitada a Masculino/Feminino conforme definição do projeto; opção N removida apenas da UI de onboarding.",
+    "profileGate não utilizado.",
+    "Aptitude permanece removida."
+  ],
+  "checks": {
+    "intro_video_exists": true,
+    "logo_exists": true,
+    "intro_routes_onboarding": true,
+    "intro_routes_tabs": true,
+    "onboarding_three_steps": true,
+    "gender_male": true,
+    "gender_female": true,
+    "gender_neutral_removed_from_ui": true,
+    "tamer_filter_by_gender": true,
+    "complete_onboarding_called": true,
+    "onboarding_routes_tabs": true,
+    "stack_intro": true,
+    "stack_onboarding": true,
+    "stack_tabs": true,
+    "profile_gate_absent": true,
+    "aptitude_absent_core": true,
+    "six_tamers": true,
+    "six_starters": true,
+    "asset:assets/tamers/mimi_bg.webp": true,
+    "asset:assets/tamers/sora_bg.webp": true,
+    "asset:assets/tamers/kari_bg.webp": true,
+    "asset:assets/tamers/matt.webp": true,
+    "asset:assets/tamers/tai_bg.webp": true,
+    "asset:assets/tamers/tk.webp": true
+  },
+  "all_checks_passed": true,
+  "sha256": {
+    "app/intro.tsx": "68393cb000368aaf6131ba6b35fdcf86599eed0c2e763ac0583fc4467d2fea04",
+    "app/onboarding.tsx": "2a3d5b26f7139ea47494d6f1e54d44cf3e28a41cbc270a0ee7314fcf42efdde2",
+    "app/_layout.tsx": "f9f937651f6c3b361951981e564ccea7f43d77f21e714c98e09218e046311d17",
+    "context/GameContext.tsx": "1b9854ef810b45ad9c7b71fa340229c0a13ea45126ecd4aef05c638a5b1adac1",
+    "constants/gameData.ts": "499f45f5a620a1a0f4a6c5948562843a4581b6985a52007ec74e0882578eaeef"
+  }
+}

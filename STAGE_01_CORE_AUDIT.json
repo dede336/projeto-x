@@ -1,0 +1,56 @@
+{
+  "stage": 1,
+  "title": "Base/Core",
+  "source_parts": 4,
+  "source_file_count": 5086,
+  "verified_core_files": {
+    "context/GameContext.tsx": {
+      "bytes": 59925,
+      "sha256": "1b9854ef810b45ad9c7b71fa340229c0a13ea45126ecd4aef05c638a5b1adac1"
+    },
+    "app/_layout.tsx": {
+      "bytes": 14766,
+      "sha256": "f9f937651f6c3b361951981e564ccea7f43d77f21e714c98e09218e046311d17"
+    },
+    "app/intro.tsx": {
+      "bytes": 3534,
+      "sha256": "68393cb000368aaf6131ba6b35fdcf86599eed0c2e763ac0583fc4467d2fea04"
+    },
+    "app/onboarding.tsx": {
+      "bytes": 13916,
+      "sha256": "dd42d31b478d2dacf7bc6cbf647752aef9b2bc927f9d8b40319fb9455ae0be51"
+    },
+    "constants/gameData.ts": {
+      "bytes": 124598,
+      "sha256": "499f45f5a620a1a0f4a6c5948562843a4581b6985a52007ec74e0882578eaeef"
+    },
+    "utils/gameEngine.ts": {
+      "bytes": 10899,
+      "sha256": "312beef0cfcf33581828425e8fba9b16cf3c2a07c71715077ea8724a213871ab"
+    },
+    "utils/battleEngine.ts": {
+      "bytes": 8424,
+      "sha256": "0c05a839d886d73d5c08b8fe2e7a8123a3b96d54b6a5287887efe4050ad023dd"
+    },
+    "components/SaveManagerSection.tsx": {
+      "bytes": 13387,
+      "sha256": "7bf8c046567db4bd4d1d1f715137f10ed39fa2d3939228609c497070eac83b20"
+    }
+  },
+  "storage_key": "omega_dx10_save_v3",
+  "onboarding_flow": "intro -> onboarding when isOnboarded=false -> /(tabs)",
+  "tamer_starters": {
+    "tamer_tai": "agumon",
+    "tamer_tk": "patamon",
+    "tamer_matt": "gabumon",
+    "tamer_kari": "salamon",
+    "tamer_sora": "pyomon",
+    "tamer_mimi": "palmon"
+  },
+  "permanent_rules_applied": [
+    "Aptitude removed from source/types/stats",
+    "No profileGate introduced",
+    "Original intro/onboarding/tamer flow preserved"
+  ],
+  "note": "Critical-hit dependency on removed Aptitude was replaced by a fixed 5% compatibility chance; battle mechanics receive full audit in stage 7."
+}
