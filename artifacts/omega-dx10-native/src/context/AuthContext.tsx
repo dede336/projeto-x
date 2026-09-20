@@ -1,6 +1,5 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Constants from 'expo-constants';
 
 export const AUTH_TOKEN_KEY = 'omega_dx10_auth_token';
 
@@ -43,16 +42,7 @@ export function useAuth() {
 }
 
 function buildApiUrl(): string {
-  const env = process.env.EXPO_PUBLIC_API_URL;
-  if (env) return env;
-  const domain = process.env.EXPO_PUBLIC_DOMAIN;
-  if (domain) return `https://${domain}/api`;
-  if (__DEV__) {
-    const hostUri = (Constants.expoConfig?.hostUri ?? '') as string;
-    const host = hostUri.split(':')[0] ?? '';
-    if (host) return `https://${host}/api`;
-  }
-  return '/api';
+  return 'https://omega-dx-backend.onrender.com/api';
 }
 
 const AUTH_TIMEOUT_MS = 15000;

@@ -5,28 +5,26 @@ import {
   Text,
   View,
 } from 'react-native';
-import {
-  NavigationContainer,
-} from '@react-navigation/native';
-import {
-  createNativeStackNavigator,
-} from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { AuthProvider } from '@/context/AuthContext';
 import { LanguageProvider } from '@/context/LanguageContext';
 import LanguageSelectNative from '@/screens/LanguageSelectNative';
+import LoginNative from '@/screens/LoginNative';
 
 const Stack = createNativeStackNavigator();
 
-function LoginPlaceholder() {
+function GamePlaceholder() {
   return (
     <View style={styles.placeholder}>
-      <Text style={styles.title}>OMEGA DX10</Text>
+      <Text style={styles.title}>LOGIN CONCLUÍDO</Text>
       <Text style={styles.text}>
-        Seleção de idioma concluída.
+        O aplicativo conectou ao servidor.
       </Text>
       <Text style={styles.text}>
-        Próxima etapa: migrar o login.
+        Próxima etapa: migrar a introdução e o jogo.
       </Text>
     </View>
   );
@@ -36,20 +34,29 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <LanguageProvider>
-        <StatusBar barStyle="light-content" backgroundColor="#0a0a0f" />
+        <AuthProvider>
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor="#0a0a0f"
+          />
 
-        <NavigationContainer>
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen
-              name="LanguageSelect"
-              component={LanguageSelectNative}
-            />
-            <Stack.Screen
-              name="Login"
-              component={LoginPlaceholder}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
+          <NavigationContainer>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
+              <Stack.Screen
+                name="LanguageSelect"
+                component={LanguageSelectNative}
+              />
+              <Stack.Screen
+                name="Login"
+                component={LoginNative}
+              />
+              <Stack.Screen
+                name="Game"
+                component={GamePlaceholder}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </AuthProvider>
       </LanguageProvider>
     </SafeAreaProvider>
   );
@@ -65,13 +72,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#0a0a0f',
   },
   title: {
-    color: '#f97316',
-    fontSize: 28,
+    color: '#22c55e',
+    fontSize: 24,
     fontWeight: '900',
+    textAlign: 'center',
   },
   text: {
     color: '#ffffff',
     fontSize: 16,
     textAlign: 'center',
   },
-});
+})});
