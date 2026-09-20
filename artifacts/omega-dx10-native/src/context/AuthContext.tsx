@@ -48,6 +48,28 @@ function buildApiUrl(): string {
 const AUTH_TIMEOUT_MS = 15000;
 const AUTO_RETRY_INTERVAL_MS = 8000;
 
+
+async function readApiResponse(res: Response): Promise<any> {
+  const text = await res.text();
+  let data: any = {};
+
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch {
+    throw new Error(
+      res.ok
+        ? 'Resposta inválida do servidor.'
+        : `Servidor indisponível ou com erro interno (HTTP ${res.status}).`,
+    );
+  }
+
+  if (!res.ok) {
+    throw new Error(data.error ?? `Erro do servidor (HTTP ${res.status}).`);
+  }
+
+  return data;
+}
+
 function fetchWithTimeout(url: string, options: RequestInit, timeoutMs: number): Promise<Response> {
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeoutMs);
@@ -129,8 +151,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   async function login(usernameOrEmail: string, password: string) {
     const res = await apiFetch('/auth/login', undefined, { username: usernameOrEmail, password });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error ?? 'Erro ao entrar');
+    const data = await readApiResponse(res);
     await AsyncStorage.setItem(AUTH_TOKEN_KEY, data.token);
     setToken(data.token);
     setUser({
@@ -145,8 +166,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   async function register(username: string, password: string, email?: string) {
     const res = await apiFetch('/auth/register', undefined, { username, password, email: email || undefined });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error ?? 'Erro ao criar conta');
+    const data = await readApiResponse(res);
     await AsyncStorage.setItem(AUTH_TOKEN_KEY, data.token);
     setToken(data.token);
     setUser({
